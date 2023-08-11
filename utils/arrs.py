@@ -13,7 +13,10 @@ def get(array, index, default=None):
     """
     if index < 0:
         return default
-
+    # здесь ошибка в функции: если не существует индекс,
+    # потому что список пуст, то тоже нужно вернуть значение по умолчанию
+    if array == []:
+        return default
     return array[index]
 
 
